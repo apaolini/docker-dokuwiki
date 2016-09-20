@@ -7,7 +7,7 @@ FROM ubuntu:14.04
 MAINTAINER Andrea Paolini <ap@nuxi.it>
 
 # Dokuwiki Version
-ENV DOKUWIKI_VERSION  2016-06-26
+ENV DOKUWIKI_VERSION  2016-06-26a
 
 # Install lighttpd and PHP
 RUN  apt-get update \
@@ -17,7 +17,7 @@ RUN  apt-get update \
   && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 # Get and deploy dokuwiki
-RUN curl -s -o /dokuwiki.tgz "http://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz" \
+RUN curl -s -o /dokuwiki.tgz "https://download.dokuwiki.org/src/dokuwiki/dokuwiki-${DOKUWIKI_VERSION}.tgz" \
   && cd /var/www/ \
   && tar -zxf /dokuwiki.tgz \
   && mv dokuwiki-${DOKUWIKI_VERSION} dokuwiki \
