@@ -6,6 +6,8 @@ Dokuwiki docker image
 The wiki is published on /dokuwiki , the setup interface is on
 /dokuwiki/install.php
 
+[![](https://images.microbadger.com/badges/image/apaolini/dokuwiki.svg)](https://microbadger.com/images/apaolini/dokuwiki "Get your own image badge on microbadger.com")
+
 Running
 -------
 
