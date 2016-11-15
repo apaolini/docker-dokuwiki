@@ -22,11 +22,9 @@ Running
 docker run \
   -v /data/dokuwiki/conf/:/var/www/dokuwiki/conf/ \
   -v /data/dokuwiki/data/:/var/www/dokuwiki/data/ \
-  -v /data/dokuwiki/lib/plugins/:/var/www/dokuwiki/lib/plugins/ \
-  -v /data/dokuwiki/lib/tpl/:/var/www/dokuwiki/lib/tpl/ \
   apaolini/dokuwiki
 ```
-`run.sh` is a sample script for running the image mounting the data from the local directory.
+`run.sh` (in the github repo) is a sample script for running the image mounting the data from the local directory.
 
 Build
 -----
