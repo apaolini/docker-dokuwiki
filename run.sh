@@ -17,12 +17,12 @@ fi
 
 docker run \
   --name dokuwiki \
-  -v $(pwd)/dokuwiki/conf/:/var/www/dokuwiki/conf/ \
-  -v $(pwd)/dokuwiki/data/:/var/www/dokuwiki/data/ \
-  -v $(pwd)/dokuwiki/lib/plugins/:/var/www/dokuwiki/lib/plugins/ \
-  -v $(pwd)/dokuwiki/lib/tpl/:/var/www/dokuwiki/lib/tpl/ \
+  -v $(pwd)/dokuwiki/conf/:/var/www/html/dokuwiki/conf/ \
+  -v $(pwd)/dokuwiki/data/:/var/www/html/dokuwiki/data/ \
+  -v $(pwd)/dokuwiki/lib/plugins/:/var/www/html/dokuwiki/lib/plugins/ \
+  -v $(pwd)/dokuwiki/lib/tpl/:/var/www/html/dokuwiki/lib/tpl/ \
   -d --restart=always \
   --net=$NETNAME \
   apaolini/dokuwiki
 
-docker exec dokuwiki /bin/rm /var/www/dokuwiki/install.php
+docker exec dokuwiki /bin/rm /var/www/html/dokuwiki/install.php

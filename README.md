@@ -20,8 +20,8 @@ Running
 ### Run persisting data and configurations ###
 ```
 docker run \
-  -v /data/dokuwiki/conf/:/var/www/dokuwiki/conf/ \
-  -v /data/dokuwiki/data/:/var/www/dokuwiki/data/ \
+  -v /data/dokuwiki/conf/:/var/www/html/dokuwiki/conf/ \
+  -v /data/dokuwiki/data/:/var/www/html/dokuwiki/data/ \
   apaolini/dokuwiki
 ```
 `run.sh` (in the github repo) is a sample script for running the image mounting the data from the local directory.
@@ -34,4 +34,4 @@ Caveat
 ------
 After the first configuration remember to disable the administration interface removing the `install.php` file, like that:
 
-    docker exec <DOKUWIKI_CONTAINERAME> /bin/rm /var/www/dokuwiki/install.php
+    docker exec <DOKUWIKI_CONTAINERAME> /bin/rm /var/www/html/dokuwiki/install.php
