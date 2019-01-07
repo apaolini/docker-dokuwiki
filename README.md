@@ -19,7 +19,7 @@ Running
 
 ### Run persisting data and configurations ###
 ```
-docker run \
+docker run -d -p 8080:80 \
   -v /data/dokuwiki/conf/:/var/www/html/dokuwiki/conf/ \
   -v /data/dokuwiki/data/:/var/www/html/dokuwiki/data/ \
   apaolini/dokuwiki
