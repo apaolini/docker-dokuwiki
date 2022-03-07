@@ -34,4 +34,4 @@ Caveat
 ------
 After the first configuration remember to disable the administration interface removing the `install.php` file, like that:
 
-    docker exec <DOKUWIKI_CONTAINERAME> /bin/rm /var/www/html/dokuwiki/install.php
+    docker exec <DOKUWIKI_CONTAINERNAME> /bin/rm /var/www/html/dokuwiki/install.php
